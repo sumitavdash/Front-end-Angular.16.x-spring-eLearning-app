@@ -1,0 +1,21 @@
+.bg-img {
+    background-image: url('/assets/bg1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: calc(100vh - 10px);
+    margin: 5px;
+    position: relative; /* Position the container relative to this */
+}
+ 
+ 
+
+.container-fluid p {
+    /* Style for the content paragraphs */
+    color: #555; /* Change the color to your preference */
+    font-size: 15px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Optional margin for spacing */
+     
+
+}

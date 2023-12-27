@@ -1,0 +1,7 @@
+/* Add some padding to the list items for better spacing */
+mat-card {
+    width: 200px;
+    margin-top:60px;
+    background: linear-gradient(to right, #0b5a1a,  #5a8438); /* Gradient background */
+}
+ 

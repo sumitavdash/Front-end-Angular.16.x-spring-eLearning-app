@@ -1,0 +1,15 @@
+.container{
+     margin-top: 20px;
+     margin-bottom: 30px;
+     margin-left: 10px;
+     margin-right: 10px;
+}
+     
+h1{
+    background-color: rgba(5, 79, 12, 0.708);
+    border-radius: 7px; /* Adjust the radius as needed for rounded corners */
+    padding: 5px; /* Add padding for content inside the box */
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    margin-top: 70px;
+    text-align: center;
+}

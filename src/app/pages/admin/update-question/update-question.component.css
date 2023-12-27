@@ -1,0 +1,14 @@
+.mt20{
+    margin-top: 20px !important;
+}
+.w100{
+    width: 100%;
+}
+h1{
+    background-color: rgba(3, 53, 8, 0.637);
+border-radius: 7px; /* Adjust the radius as needed for rounded corners */
+padding: 5px; /* Add padding for content inside the box */
+/* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);  */
+margin-top: 50px;
+text-align: center;
+}

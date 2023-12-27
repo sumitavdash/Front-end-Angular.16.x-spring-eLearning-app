@@ -1,0 +1,64 @@
+ <!-- <app-navbar></app-navbar> -->
+<div class="bootstrap-wrapper">
+  <div class="container text-center">
+    <div class="row justify-content-center" style="margin-top: 30px;">
+      <div class="col-md-6 offset-md-3">
+        <div class="container1 text-center">
+          <img src="/assets/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <h2 class="text-center">Register Here</h2>
+
+        <form [formGroup]="signUpForm" (ngSubmit)="submitForm()">
+          <!-- username -->
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input formControlName="username" matInput placeholder="Enter here">
+            <mat-hint>*(Username must be Unique) </mat-hint>
+          </mat-form-field>
+
+          <!-- Firstname  -->
+          <mat-form-field class="full-width" appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- lastname -->
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input formControlName="lastName" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- phone no -->
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Mobile no.</mat-label>
+            <input formControlName="phone" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- email -->
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- password -->
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput placeholder="Enter here">
+            <mat-hint>*(At least One Upper and Lower and Numeric and Special character)</mat-hint>
+          </mat-form-field>
+
+          <div class="container2 text-center">
+             
+               
+                <button type="submit" mat-raised-button color="accent" [disabled]="signUpForm.invalid">Submit</button>
+               
+               
+                <button style="margin-left: 10px" mat-raised-button color="primary" (click)="resetForm()">Reset</button>
+               
+            </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

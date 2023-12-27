@@ -1,0 +1,13 @@
+mat-card {
+    width: 200px;
+    margin-top:60px;
+    background: linear-gradient(to right, #0b5a1a,  #5a8438); /* Gradient background */
+}
+mat-card .custom-subheader {
+    background-color: rgba(3, 53, 8, 0.637);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 0px;
+    text-align: center;
+}
+  

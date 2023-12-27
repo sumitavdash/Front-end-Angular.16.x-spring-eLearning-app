@@ -1,0 +1,71 @@
+.profile-image{
+    max-width: 140px;
+    max-height: 140px;
+    border: 2px solid rgba(18, 183, 26, 0.781);
+    border-radius: 50%;
+}
+.table{
+    width: 100%;
+    border: 2px solid rgb(10, 92, 14);
+     border-collapse: collapse;
+     margin: 10px;
+}
+/* .table tr td{
+    padding: 10px 20px;
+    border: 1px solid rgb(10, 92, 14);
+
+} */
+
+.table td {
+    padding: 4px 8px; /* Adjust padding values as needed */
+    font-size: 12px; /* Adjust font size as needed */
+    border: 1px solid rgb(10, 92, 14);
+    text-align: left; /* Adjust text alignment as needed */
+  }
+  
+  /* Adjust the header cells if needed */
+  .table th {
+    padding: 4px 8px; /* Adjust padding values as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    border: 1px solid rgb(10, 92, 14);
+    text-align: left; /* Adjust text alignment as needed */
+  }
+
+.mb20{
+    margin-bottom: 20px !important;
+}
+.mt20{
+    margin-top: 20px !important;
+}
+.ml450{
+    margin-left: 450px !important;
+}
+.ml140{
+    margin-left: 140px !important;
+}
+.mt10{
+    margin-top: 10px !important;
+}
+.ml80{
+    margin-left: 80px !important;
+}
+mat-card{ 
+    margin-top: 70px;
+}
+.text-center{
+    text-align: center;
+    
+}
+.center-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  h2{
+    background-color: rgba(3, 53, 8, 0.637);
+    border-radius: 7px; /* Adjust the radius as needed for rounded corners */
+    padding: 5px; /* Add padding for content inside the box */
+    /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);  */
+    margin-top: 0px;
+    text-align: center;
+  }
+  
