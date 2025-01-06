@@ -1,0 +1,41 @@
+/* Ensure the sidebar stays fixed to the left and content takes up remaining space */
+/* Wrapper holding both sidebar and content */
+.bootstrap-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.bootstrap-wrapper .col-md-2 {
+  position: fixed; /* Keep the sidebar fixed on the left */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px; /* Adjust sidebar width for larger screens */
+  background-color: #29db44;
+  z-index: 100;
+  transition: width 0.3s ease; /* Add transition to sidebar width */
+}
+
+.bootstrap-wrapper .col-md-10 {
+  margin-left: 20px; /* Adjust content margin to match sidebar width */
+  padding: 20px; /* Add padding to the content area */
+  height: 100vh; /* Ensure content occupies full height */
+  overflow-y: auto; /* Ensure content scrolls if needed */
+  transition: margin-left 0.3s ease; /* Transition for smooth movement */
+}
+
+@media screen and (max-width: 768px) {
+  .bootstrap-wrapper .col-md-2 {
+    width: 100px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .bootstrap-wrapper .col-md-10 {
+    margin-left: 30px; /* Adjust content margin for smaller screens */
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    margin-left: 10px;
+  }
+}

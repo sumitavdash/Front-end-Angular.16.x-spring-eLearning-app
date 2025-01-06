@@ -1,0 +1,36 @@
+ /* about.component.css */
+
+.about {
+    background-color:  #EDF5E1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: auto; /* Adjusted to 'auto' to allow dynamic height based on content */
+    margin: 5px;
+    position: relative;
+    /* Additional styles specific to the about section */
+  }
+  
+  /* .container-fluid p {
+     
+    color: #555;  
+    font-size: 15px;  
+    margin-bottom: 10px;  
+  } */
+  
+  .about-banner {
+    width: 100%;
+    height: 100%; /* Adjusted to '100%' to fill the container height */
+    object-fit: cover;
+    /* Add any other styles you want for the banner image */
+  }
+  
+  .about-banner-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Set the desired height */
+    overflow: hidden;
+    /* Add any other styles you want for the container */
+  }
+  

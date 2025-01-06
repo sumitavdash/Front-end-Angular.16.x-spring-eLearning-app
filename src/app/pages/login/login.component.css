@@ -1,0 +1,92 @@
+.bootstrap.wrapper {
+    /* margin-top: 30px; */
+    margin-top: 30px;
+    background: linear-gradient(to right, #0b5a1a,  #5a8438); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  
+  }
+  
+  .logo-img {
+    /* max-width: 100px; */
+    max-width: 80px;
+  }
+  
+  .card {
+    /* max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  h1 {
+    /* margin-top: 16px;
+    margin-bottom: 24px; */
+    margin-top: 16px;
+  margin-bottom: 24px;
+  color: #333; /* Adjust heading color */
+  }
+  
+  form {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+     
+    
+  }
+  
+  .btn-primary {
+    margin-top: 24px;
+  }
+  
+  .forgot-password-link {
+    /* margin-top: 16px;
+    display: block;
+    text-align: center; */
+    margin-top: 16px;
+    display: block;
+    text-align: center;
+    color: #3494E6; /* Adjust link color */
+  }
+  .octagon {
+    /* width: 200px; 
+    height: 200px; 
+    background-color: green;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100px;
+  height: 100px;
+  background-color: #247227;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  }
+  
+  .octagon img {
+    max-width: 100%; /* Make the logo occupy the whole inside of the octagon */
+    max-height: 100%; /* Make the logo occupy the whole inside of the octagon */
+    padding: 5px; /* Add some padding to create the outer thin green margin */
+    box-sizing: border-box;
+  }
+  
+  

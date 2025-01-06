@@ -1,0 +1,106 @@
+.nav__cont {
+  position: fixed;
+  width: 60px;
+  top: 70px; /* Adjusted from 0 to 70px */
+  left: 0; /* Ensure the sidebar is flush with the left edge */
+  height: calc(100vh - 70px); /* Adjust the height accordingly */
+  z-index: 100;
+  background-color: #29db44;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  cursor: pointer;
+  box-shadow: 4px 7px 10px rgba(90, 239, 70, 0.671);
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center elements horizontally inside the sidebar */
+  justify-content: center; /* Center elements vertically */
+  &:hover {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 10px; /* Reduce the sidebar width for smaller screens */
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 70px;
+  }
+}
+
+.nav {
+  list-style-type: none;
+  color: white;
+  padding: 0; /* Remove default list padding */
+  margin: 0; /* Remove default list margin */
+}
+
+.nav__items {
+  font-family: "Roboto";
+  margin-bottom: 2rem; /* Add spacing between items */
+  a {
+    position: relative;
+    display: block;
+    text-align: center; /* Center the text inside the sidebar */
+    padding: 0; /* Remove extra padding */
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 2px;
+      background: radial-gradient(
+        circle at 94.02% 88.03%,
+        #096825,
+        transparent 100%
+      );
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: -10;
+    }
+  }
+  &:hover a:after {
+    opacity: 1;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto; /* Center the SVG horizontally */
+    cursor: pointer;
+    @media screen and (min-width: 600px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(
+      circle at 94.02% 88.03%,
+      #54a4ff,
+      transparent 100%
+    ),
+    radial-gradient(circle at 25.99% 27.79%, #ff94fb, transparent 100%),
+    radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+}
+
+h1 {
+  margin-top: 6rem;
+  margin-left: 80px;
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 6px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}

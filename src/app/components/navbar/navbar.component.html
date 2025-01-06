@@ -1,0 +1,44 @@
+<mat-toolbar class="dark-green-navbar">
+  <a
+    routerLink="/"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </a>
+  <span>symphonyEDU</span>
+  <span class="example-spacer"></span>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>login</mat-icon>
+  </a>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon
+      ><span class="material-symbols-outlined"> how_to_reg </span></mat-icon
+    >
+  </a>
+
+  <ng-container *ngIf="isLoggedIn && user">
+    <span
+      class="italic-username"
+      [routerLink]="'/admin/profile'"
+      style="cursor: pointer"
+      >{{ user.username }}</span
+    >
+    <a mat-icon-button (click)="logout()" aria-label="Logout">
+      <mat-icon>power_settings_new</mat-icon>
+    </a>
+  </ng-container>
+</mat-toolbar>

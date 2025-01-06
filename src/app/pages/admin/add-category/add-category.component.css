@@ -1,0 +1,20 @@
+.w100{
+    width: 100%;
+}
+.mb15{
+    margin-bottom: 15px !important;
+}
+.mt15{
+    margin-top: 15px !important;
+}
+mat-card{
+    margin-top: 70px;
+    }
+    h1{
+        background-color: rgba(3, 53, 8, 0.637);
+        border-radius: 7px; /* Adjust the radius as needed for rounded corners */
+        padding: 5px; /* Add padding for content inside the box */
+        /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);  */
+        margin-top: 0px;
+        text-align: center;
+    }

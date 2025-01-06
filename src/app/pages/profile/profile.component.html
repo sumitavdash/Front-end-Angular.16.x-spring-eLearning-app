@@ -1,0 +1,85 @@
+<mat-card *ngIf="user">
+    <h2>Profile Details</h2>
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="container">
+          <div class="container text-center">
+            <img src="https://i0.wp.com/pbs.twimg.com/media/EfwfM9mX0AcM7Ea.jpg" alt="" class="profile-image" />
+            <h1 style="font-weight: bold;">{{ user.firstName }} {{ user.lastName }}</h1>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <table class="table text-center">
+                <tr>
+                  <td>Username</td>
+                  <td>
+                    <ng-container *ngIf="!editing; else  editUsernameField">
+                      {{ user.username }}
+                    </ng-container>
+                    <ng-template  #editUsernameField>
+                      <input type="text" [(ngModel)]="editableUsername" name="editableUsername" />
+                    </ng-template>
+                  </td>
+                </tr>
+                <tr>
+                  <td>First Name</td>
+                  <td>
+                    <ng-container *ngIf="!editing; else editFirstNameField">
+                      {{ user.firstName }}
+                    </ng-container>
+                    <ng-template #editFirstNameField>
+                      <input type="text" [(ngModel)]="editableFirstName" name="editableFirstName" />
+                    </ng-template>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Last Name</td>
+                  <td>
+                    <ng-container *ngIf="!editing; else  editLastNameField">
+                      {{ user.lastName }}
+                    </ng-container>
+                    <ng-template #editLastNameField>
+                      <input type="text" [(ngModel)]="editableLastName" name="editableLastName" />
+                    </ng-template>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phone</td>
+                  <td>
+                    <ng-container *ngIf="!editing; else  editPhoneField">
+                      {{ user.phone }}
+                    </ng-container>
+                    <ng-template #editPhoneField>
+                      <input type="text" [(ngModel)]="editablePhone" name="editablePhone" />
+                    </ng-template>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>
+                     {{user.email}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Role</td>
+                  <td>{{ user.authorities[0].authority }}</td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td>{{ user.enabled ? 'ACTIVE' : 'NOT ACTIVE' }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  
+    <mat-card-actions class="text-center center-buttons">
+      <button *ngIf="!editing" (click)="toggleEdit()"   mat-raised-button color="primary">EDIT</button>
+      <button *ngIf="editing" (click)="updateUser()"    mat-raised-button color="accent">SAVE</button>
+      <button *ngIf="editing" (click)="toggleEdit()"   style="margin-left: 15px;"  mat-raised-button color="primary">CANCEL</button>
+    </mat-card-actions>
+  </mat-card>
+  

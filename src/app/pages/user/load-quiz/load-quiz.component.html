@@ -1,0 +1,53 @@
+  
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1><i>Available Exams</i></h1>
+        <div class="row mt20" *ngIf="quizzes">
+             
+            <div class="col-md-4" *ngFor="let q of quizzes">
+
+                 <mat-card class="mb20">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>
+                            {{q.title}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{q.category.title}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p class="truncate">{{q.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                         <div class="button-container">
+                            <button   [routerLink]="'/user-dashboard/instructions/'+q.qId" mat-raised-button  color="primary">view</button>
+                        <button mat-stroked-button color="accent" class="ml3" >
+                            <span>Questions :{{q.numberOfQuestions}}</span></button>
+                        <button mat-stroked-button color="link" class="ml3" >
+                            <span>Marks :{{q.maxMarks}}</span></button>
+                            <button mat-raised-button color="warn" class="ml3"
+                            [routerLink]="'/user-dashboard/instructions/' + q.qId"  
+                             >start</button>    
+
+                         </div>
+                      </mat-card-actions>
+                      <mat-card-footer>
+                        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                      </mat-card-footer>
+                 </mat-card>
+
+            </div>
+
+            <div class="col-md-12" *ngIf="quizzes.length == 0">
+                <mat-card>
+                    <mat-card-content>
+                        <h1>No Data In This Category</h1>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+             
+        </div>
+    </div>
+</div>
+ 

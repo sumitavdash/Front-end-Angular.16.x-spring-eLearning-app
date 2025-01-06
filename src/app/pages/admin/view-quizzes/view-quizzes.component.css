@@ -1,0 +1,107 @@
+.mt10{
+    margin-top: 10px !important;
+}
+
+.example-header-image {
+    background-image: url('../../../../assets/quizzes.png');
+    background-size: cover;
+  }
+
+  .mr20{
+    margin-right: 20px !important;
+
+  }
+
+  .ml20{
+
+    margin-left: 20px !important;
+
+  }
+  .mb20{
+    margin-bottom: 20px !important;
+  }
+  .mt40{
+    margin-top: 40px !important;
+  }
+  .ml10{
+    margin-left: 10px;
+  }
+   .mr10{
+    margin-right: 10px;
+   }
+  .quiz-badge-active {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Use 50% for a circle */
+    background-color: #4CAF50; /* Green color */
+    border: 3px solid #000; /* Black border */
+    display: inline-block;
+  }
+  .quiz-badge-inactive {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Use 50% for a circle */
+    background-color: #ff0000; /*  #420D09 Green color */
+    border: 3px solid #000; /* Black border */
+    display: inline-block;
+  }
+  .badge-container {
+    /* display: flex; */
+    /* flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between; */
+    /* position: fixed; */
+    right: 0;
+    margin-left: auto; /* Push the badge to the right */
+    margin-right: 8px;
+  }
+  .container{
+    margin-top: 70px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+  }
+   
+  .button-container button {
+     
+     margin: 5px;
+    border-width:1.5px;
+    border-style: solid;
+  }
+  
+  .button-container button[color="accent"] {
+    border-color: #bcc213; /* Adjust the color for the accent button */
+  }
+  
+  .button-container button[color="link"] {
+    border-color: #120c0e; /* Adjust the color for the link button */
+  }
+  
+  .button-container button[color="primary"] {
+    border-color: #4d60c0; /* Adjust the color for the primary button */
+  }
+  
+  .button-container button[color="warn"] {
+    border-color: #e03a2e; /* Adjust the color for the warn button */
+  }
+  
+  
+  /* .button-container button {
+    flex-basis: calc(33.33% - 20px);  
+  }
+  
+  @media (max-width: 768px) {
+    .button-container button {
+      flex-basis: calc(50% - 20px);  
+  }
+  
+  @media (max-width: 480px) {
+    .button-container button {
+      flex-basis: calc(100% - 20px);  
+    }
+  }
+  
+   */

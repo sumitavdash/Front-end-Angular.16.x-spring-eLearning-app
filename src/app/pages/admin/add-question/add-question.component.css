@@ -1,0 +1,17 @@
+.mt20{
+    margin-top: 20px !important;
+}
+.w100{
+    width: 100%;
+}
+h1{
+    background-color: rgba(3, 53, 8, 0.637);
+        border-radius: 7px;  
+        padding: 5px;  
+         
+        margin-top: 50px;
+        text-align: center;
+        /* position: fixed; */
+        
+}
+ 

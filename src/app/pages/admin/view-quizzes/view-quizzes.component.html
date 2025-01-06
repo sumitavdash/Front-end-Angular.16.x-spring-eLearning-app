@@ -1,0 +1,57 @@
+
+ <div class="container">
+    <mat-card  class="mt10  " *ngFor="let q of quizzes">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>
+                {{q.title}}
+            </mat-card-title>
+            <div *ngIf="q.active== true " class="badge-container">
+                <div class="quiz-badge-active"></div>
+              </div>
+    
+              <div *ngIf="q.active== false " class="badge-container">
+                <div class="quiz-badge-inactive"></div>
+              </div>
+            <mat-card-subtitle>
+                {{q.category.title}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p> {{q.description}} </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="button-container">
+                <button [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title" mat-stroked-button color="accent">
+                  <mat-icon>question_answer</mat-icon> Questions
+                </button>
+            
+                <button mat-stroked-button color="link"  >
+                  <mat-icon>poll</mat-icon> Max Marks: {{ q.maxMarks }}
+                </button>
+            
+                <button mat-stroked-button color="primary"  >
+                  <mat-icon>format_list_numbered</mat-icon> Number Of Questions: {{ q.numberOfQuestions }}
+                </button>
+            
+                <button [routerLink]="'/admin/quiz/' + q.qId" mat-stroked-button color="warn"  >
+                  <mat-icon>edit</mat-icon> Update
+                </button>
+            
+                <button [routerLink]="'/admin/attempt-details/'" mat-stroked-button color="link"  >
+                  <mat-icon>history</mat-icon> Attempts
+                </button>
+            
+                <button mat-stroked-button color="primary"   (click)="deleteQuiz(q.qId)">
+                  <mat-icon>delete_forever</mat-icon> Delete
+                </button>
+              </div>
+        </mat-card-actions>
+         
+         
+    </mat-card>
+ </div>
+
+<div class="container text-center mt40 ">
+    <button routerLink='/admin/add-quiz' mat-raised-button color="basic">Add New Exam</button>
+</div>

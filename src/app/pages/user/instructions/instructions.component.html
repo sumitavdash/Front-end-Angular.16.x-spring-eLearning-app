@@ -1,0 +1,67 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20"> 
+                <mat-card-header>
+                    <!-- heading -->
+                    <mat-card-title>
+                        Read the instructions of this page carefully
+                    </mat-card-title>
+
+                    <mat-card-subtitle  class="text-center">
+                         <i><b>Strive thrive and success</b></i>
+                         <h1><strong>All the best SymphoFighters </strong></h1>
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+
+                <mat-card-content class="ml20">
+                    <!-- content -->
+                    <!-- <h1>{{quiz.title}}</h1>
+                    <p>{{quiz.descriptions}}</p> -->
+
+
+                    <mat-divider></mat-divider>
+                     <br />
+                     <h1>Important Instructions</h1>
+
+                     <ul>
+                        <li>This exam is only for practice purpose.</li>
+                        <!-- <li>You have to submit exam within {{quiz.numberOfQuestions *2}}.</li> -->
+                        <li>All questions in the exam will be <b>MCQ</b> types.</li>
+                        <li>This {{quiz.title}} will contain questions related to  topics<br><b>{{quiz.description}}</b></li>
+                        <li>You have to submit this exam with in <b>3 hrs</b>.</li>
+                        <li>You can attempt the exam any number of time.</li>
+                        <li>There are total <b>{{quiz.numberOfQuestions }}</b> numbers of questions and <b>{{quiz.maxMarks}}</b> marks.</li>
+                        <li  *ngIf="quiz.title.startsWith('JEE-') || quiz.title.startsWith('NEET-')">Each question carries <b>4</b> marks.</li>
+                        <li  *ngIf="quiz.title.startsWith('JEE-') || quiz.title.startsWith('NEET-')">Each attempted wrong answered question will have extra <b>-1</b> negative mark. And if <br>
+                        unattempted no negative marks.</li>
+                         
+                     </ul>
+
+                     <mat-divider></mat-divider>
+                     <br/>
+                     <h1>Attemppting Exam</h1>
+                     <ul>
+                        <li>Click <b>Start</b> button to start the exam.</li>
+                        <li>
+                            The time will start the moment you click the start button.
+                        </li>
+                        <li>You can not resume this exam , if interrupted due to any issue.</li>
+                        <li>Scroll down to move to next question.</li>
+                        <li>Click on submit button on completion of the exam.</li>
+                        <li>Report of the test is automatically generated in the form of pdf copy.</li>
+                     </ul>
+                </mat-card-content>
+
+                <mat-card-actions class="text-center">
+                    <!-- action -->
+                    <button  (click)="startQuiz()" 
+                    class="" mat-raised-button color="acccent">Start</button>
+                </mat-card-actions>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+<div class="bootstrap-wrapper" *ngIf="!isSubmit">
+    <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-2">
+
+                <!-- instructions -->
+                 <mat-card class="instruction-card" style="margin-top: 20px; ">
+                        <mat-card-content>
+                            <h3><b>Instructions :</b></h3>
+                            <mat-card>
+                                <ul>
+                                    <li>Do not Refresh the Page.</li>
+                                    <li>Otherwise questions will be shuffled.</li>
+                                    <li>Do not switch in to different Tabs.</li>
+                                </ul>
+                            </mat-card>
+                        </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-7">
+    
+                <!-- questions -->
+                <ng-container *ngIf="questions">
+                    <h1 class="mt20 text-center">Ongoing exam <b>{{questions[0].quiz.title}}</b></h1>
+
+                </ng-container>
+                <mat-card *ngFor="let q of questions; let i = index" class="mt20">
+                    <mat-card-content>
+                        <p><b>Q {{i+1}})</b> <span class="ml20" [innerHTML]="q.content"></span></p>
+                         
+
+                        <mat-divider></mat-divider>
+                        <br />
+                        <div class="row mt20" >
+                            <div class="col-md-6">
+                                <input 
+                                type="radio" 
+                                [value]="q.option1"
+                                [name]="i.toString()" 
+                                [(ngModel)]="q.givenAnswer"
+                                />{{q.option1}}
+                            </div>
+                            <div class="col-md-6">
+                                <input 
+                                type="radio" 
+                                [value]="q.option2" 
+                                [name]="i.toString()"
+                                [(ngModel)]="q.givenAnswer"
+                                />{{q.option2}}
+                            </div>
+                        </div>
+
+                        <div class="row mt20">
+                            <div class="col-md-6">
+                                <input type="radio"
+                                 [value]="q.option3" 
+                                 [name]="i.toString()"
+                                 [(ngModel)]="q.givenAnswer"
+                                 />{{q.option3}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" 
+                                [value]="q.option4" 
+                                [name]="i.toString()"
+                                [(ngModel)]="q.givenAnswer"
+                                />{{q.option4}}
+                            </div>
+                        </div>
+                    </mat-card-content>
+
+                </mat-card>
+                <div class="container text-center mt20 mb20">
+                    <button (click)="submitQuiz()" mat-raised-button color="">submit</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+    
+                <!-- progress -->
+                 <mat-card  style="margin-top: 21px; ">
+                    <mat-card-header>
+                        <mat-card-title class="ml50 mr50" >
+                        <b style="color: darkred;">Timer</b></mat-card-title>
+                    </mat-card-header>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <h1 class="text-center">{{getFormattedTime()}}</h1>
+                         <mat-card>
+                            <mat-spinner color="warn" style="margin: auto" [value]="(timer - currentTime) / timer * 100">{{ (timer - currentTime) / timer * 100 }}></mat-spinner>
+                        <!-- mode="determinate" 
+                        color="warn" 
+                        style="margin: auto"
+                        [value]="(timer - currentTime)/ timer* 100"> -->
+                    <!-- </mat-spinner> -->
+                         </mat-card>
+                    </mat-card-content>
+                 </mat-card>
+
+
+  
+
+
+                 <!-- container for advertisement -->
+                 <!-- <mat-card style="width: 300px; height: 250px;">
+
+                 </mat-card> -->
+
+
+
+
+
+            </div>
+         </div>
+    </div>
+</div>
+
+<!-- Showing The Result -->
+<div class="bootstrap-wrapper" *ngIf="isSubmit">
+    <div class="row mt20">
+        <div class="col-md-6 offset-md-3">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title class="text-center">
+                        <span style="font-style: italic; 
+                        color: #7a0f7a;">Exam Result</span>
+                    </mat-card-title>
+                </mat-card-header>
+                 <mat-divider></mat-divider>
+                <mat-card-content style="display: flex; 
+                                        flex-direction: column; 
+                                                  align-items: center;
+                                                         margin-top: 20px;">
+                    <h1 style="margin: 10px 0;">
+                        <b><span style="color: rgb(10, 36, 11);">MARKS GOT :</span></b> 
+                        <span style="color: rgb(23, 23, 89);"><b>{{marksGot}}</b></span>
+                    </h1>
+                    <h1 style="margin: 10px 0;">
+                        <b><span style="color: rgb(113, 10, 82);">CORRECT ANSWERS :</span></b> 
+                        <span style= "color: rgba(100, 8, 8, 0.589);"><b>{{correctAnswers}}</b></span>
+                    </h1>
+                    <h1 style="margin: 10px 0;">
+                        <b><span style="color: rgb(75, 48, 8);">ATTEMPTEDQUESTIONS:</span></b> 
+                        <span style="color: rgb(13, 121, 13);"><b>{{attempted}}</b></span>
+                    </h1>
+                    <h1 style="margin: 10px 0;">
+                        <b><span style="color:  red">UNATTEMPTEDQUESTIONS:</span></b> 
+                        <span style="color: rgb(45, 20, 16);">
+                            <b>{{unattempted}}</b></span>
+                    </h1>
+                </mat-card-content>
+
+                <mat-card-actions class="text-center"  style="display: flex; justify-content: center;">
+
+                    <button    (click)="printPage()" mat-raised-button color="acccent">print</button>
+                    <button    class="ml15"  mat-raised-button color="warn" [routerLink]="'/user-dashboard/0'"
+                    >Close</button>
+
+                </mat-card-actions>
+                
+            </mat-card>
+        </div>
+    </div>
+</div>

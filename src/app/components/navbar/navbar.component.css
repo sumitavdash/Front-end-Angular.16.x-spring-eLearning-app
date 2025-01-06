@@ -1,0 +1,29 @@
+/* CSS styles for the dark green navbar */
+.dark-green-navbar {
+  background-color: #063d27; /* Dark Forest Green */
+  color: #ffffff; /* White text color */
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  /* margin-bottom: 400px; */
+}
+
+/* CSS styles for the space between the ExamPort title and buttons */
+.example-spacer {
+  flex: 1 1 auto;
+}
+/* navbar.component.css */
+.italic-username {
+  font-style: italic;
+  margin-right: 5px; /* Adjust spacing as needed */
+}
+main {
+  margin-top: 56px; /* Adjust as needed based on your navbar height */
+  z-index: 1; /* Set z-index to ensure content is positioned below the navbar */
+}
+
+/* Add some padding to the top of the content to avoid hiding behind the sticky navbar */
+body {
+  padding-top: 56px; /* Adjust as needed based on your navbar height */
+}
