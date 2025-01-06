@@ -1,73 +1,100 @@
 <!-- what makes us different -->
 <div class="container-fluid different">
-            <h2>What Makes Us Different:</h2>
-            <div class="register-here" [@enlarge] (click)="toggleEnlarged()">
+  <h2>What Makes Us Different:</h2>
+  <!-- <div class="register-here" [@enlarge] (click)="toggleEnlarged()">
                 <h1><strong>Register Now !!</strong></h1>
-            </div>
-    <p class="bold-heading">Comprehensive Learning:</p>
-    <p>We offer a wide range of meticulously curated study materials, practice tests, and video lectures. Our content covers all the essential topics, ensuring you are well-prepared for your exams.</p>
-    <p class="bold-heading">Expert Instructors:</p>
-    <p>Learn from the best. Our team of experienced instructors is dedicated to guiding you through the intricacies of your chosen exam, providing insights and strategies that will boost your confidence.</p>
-    <p class="bold-heading">Interactive Learning:</p>
-    <p>We believe in active learning. Our platform is designed to be engaging and interactive, making your study sessions enjoyable and productive.</p>
-     <br>
-     <!-- Three Rectangular Boxes in One Row -->
-    <div class="row">
-        <div class="col-md-4">
-            <div class="rectangular-box">
-                <!-- Add your content or images here -->
-                <img src="assets/3d-virus-cells-attacking-dna-strand.jpg" alt="Image 1">
-            </div>
-        </div>
+            </div> -->
+  <div class="register-here" [@enlarge] (click)="toggleEnlarged()">
+    <a [routerLink]="'/signup'" [ngStyle]="{ color: isEnlarged ? 'red' : '' }">
+      <h1><strong>Register Now</strong></h1>
+    </a>
+  </div>
+  <p class="bold-heading">Comprehensive Learning:</p>
+  <p>
+    We offer a wide range of meticulously curated study materials, practice
+    tests, and video lectures. Our content covers all the essential topics,
+    ensuring you are well-prepared for your exams.
+  </p>
+  <p class="bold-heading">Expert Instructors:</p>
+  <p>
+    Learn from the best. Our team of experienced instructors is dedicated to
+    guiding you through the intricacies of your chosen exam, providing insights
+    and strategies that will boost your confidence.
+  </p>
+  <p class="bold-heading">Interactive Learning:</p>
+  <p>
+    We believe in active learning. Our platform is designed to be engaging and
+    interactive, making your study sessions enjoyable and productive.
+  </p>
+  <br />
+  <!-- Three Rectangular Boxes in One Row -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="rectangular-box">
+        <!-- Add your content or images here -->
+        <img
+          src="assets/3d-virus-cells-attacking-dna-strand.jpg"
+          alt="Image 1"
+        />
+      </div>
+    </div>
 
-        <div class="col-md-4">
-            <div class="rectangular-box">
-                <!-- Add your content or images here -->
-                <img src="assets/blackboard-inscribed-with-scientific-formulas-calculations.jpg" alt="Image 2">
-            </div>
-        </div>
+    <div class="col-md-4">
+      <div class="rectangular-box">
+        <!-- Add your content or images here -->
+        <img
+          src="assets/blackboard-inscribed-with-scientific-formulas-calculations.jpg"
+          alt="Image 2"
+        />
+      </div>
+    </div>
 
-        <div class="col-md-4">
-            <div class="rectangular-box">
-                <!-- Add your content or images here -->
-                <img src="assets/binary-code-digits-technology-software-concept.jpg" alt="Image 3">
-            </div>
-        </div>
+    <div class="col-md-4">
+      <div class="rectangular-box">
+        <!-- Add your content or images here -->
+        <img
+          src="assets/binary-code-digits-technology-software-concept.jpg"
+          alt="Image 3"
+        />
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="container-fluid remaining">
-    <p class="bold-heading">Flexibility:</p>
-    <p>SymphonyEDU understands your busy schedule. Access our resources at any time, from anywhere. Study at your own pace, ensuring that you are always in control of your learning journey.</p>
-    <p class="bold-heading">Results-Oriented:</p>
-    <p>Our focus is on helping you achieve your academic goals. We take pride in the success of our students as they excel in their exams and move one step closer to their dreams.</p>
+<div class="container-fluid remaining">
+  <p class="bold-heading">Flexibility:</p>
+  <p>
+    SymphonyEDU understands your busy schedule. Access our resources at any
+    time, from anywhere. Study at your own pace, ensuring that you are always in
+    control of your learning journey.
+  </p>
+  <p class="bold-heading">Results-Oriented:</p>
+  <p>
+    Our focus is on helping you achieve your academic goals. We take pride in
+    the success of our students as they excel in their exams and move one step
+    closer to their dreams.
+  </p>
 
-       <div class="row">
-         <div class="col-md-6">
-            <div class="remaining-box">
-                <img src="assets/1703335547338[22].png" alt="Your Image">
-              </div>
-               
+  <div class="row">
+    <div class="col-md-6">
+      <div class="remaining-box">
+        <img src="assets/1703335547338[22].png" alt="Your Image" />
+      </div>
+    </div>
 
-         </div>
-          
+    <div class="col-md-12 ml20 mr20 mt20">
+      <div class="blue-box">
+        <div class="message bold-white">
+          symphonyEDU tailored for you , fueled by your dreams and fighting
+          spirits
+        </div>
+      </div>
+    </div>
 
-            <div class="col-md-12 ml20 mr20 mt20">
-                <div class="blue-box">
-                    <div class="message bold-white">
-                        symphonyEDU tailored for you , fueled by your dreams and fighting spirits
-                    </div>
-                  </div>
-            </div>
-
-          
-         <div class="col-md-6 ">
-            <div class="remaining-box">
-                <img src="assets/1703335896531[23].png"  alt="Your Image">
-              </div>
-
-         </div>
-       </div>
-       
-     
+    <div class="col-md-6">
+      <div class="remaining-box">
+        <img src="assets/1703335896531[23].png" alt="Your Image" />
+      </div>
+    </div>
+  </div>
 </div>

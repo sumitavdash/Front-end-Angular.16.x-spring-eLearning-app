@@ -7,7 +7,7 @@
   left: 0; /* Ensure the sidebar is flush with the left edge */
   height: calc(100vh - 70px); /* Adjust the height accordingly */
   z-index: 100;
-  background-color: #29db44;
+  background-color: #26a539;
   overflow: hidden;
   transition: width 0.3s ease;
   cursor: pointer;
@@ -60,7 +60,7 @@
       border-radius: 2px;
       background: radial-gradient(
         circle at 94.02% 88.03%,
-        #096825,
+        #033411,
         transparent 100%
       );
       opacity: 0;
